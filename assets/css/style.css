@@ -1,0 +1,179 @@
+body {
+	background: #f9f7f6;
+	color: #404d5b;
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: 'Raleway', Arial, sans-serif;
+  	margin: 0 auto;
+	text-align: center;
+}
+.content{
+	width: 100%;
+	height: 300px;
+	margin: 0px auto;
+	display: inline-block;
+	padding-top: 20px;
+}
+
+/*Background Colors*/
+.bgcolor1{
+	background: rgb(47,168,236);
+}
+.bgcolor2{
+	background: rgb(240,239,238);
+}
+
+/*For hoshi text effect*/
+.hoshi{
+	width: 250px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 40px;
+	height: 50px;
+	overflow: hidden;
+}
+.hoshi input {
+	width: 100%;
+	height: 100%;
+	color: #595f6e;
+	padding-top: 20px;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+.hoshi label{
+	position: absolute;
+	bottom: 0px;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid black;
+}
+/*additional style*/
+.hoshi label::after{ 
+	content: ""; 
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+.hoshi-color1::after{
+	border-bottom: 3px solid rgb(0,170,255);
+}
+.hoshi-color2::after{
+	border-bottom: 3px solid green;
+}
+.hoshi-color3::after{
+	border-bottom: 3px solid orange;
+}
+.content-hoshi{
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.3s ease;
+}
+
+.hoshi input:focus + .label-hoshi .content-hoshi,
+.hoshi input:valid + .label-hoshi .content-hoshi{
+	transform: translateY(-150%);
+	font-size: 12px;
+}
+
+.hoshi input:focus + .label-hoshi::after, 
+.hoshi input:valid + .label-hoshi::after{
+	transform: translateX(0%);
+}
+
+/*For hideo text effect*/
+.hideo{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+.hideo label{
+	position: absolute;
+	border-radius: 5px;
+	bottom: 0px;
+	left: -20%;
+	width: 50px;
+	height: 50px;
+	margin-left: 45px;
+	background-color: #899dda;
+}
+
+.hideo input{
+	width: 250px;
+	height: 50px;
+	font-size: 25px;
+	margin-right: 50px;
+	border: none;
+}
+.icon{
+	width: 100px;
+	margin-top: 15px;
+	color: #ffffff;
+}
+
+.hideo input:focus + .label-hideo {
+	width: 15%;
+	margin-left: 15px;
+}
+
+
+
+/*For juro text effect*/
+
+.hakuri{
+	display: inline-block;
+	width: 300px;
+	margin:  0 auto;
+	font-family: Lato;
+	font-size: 20px;
+	margin-right: 50px;
+	text-align: left;
+}
+.hakuri #input-hakuri{    
+	width: 300px;
+	height: 80px;  
+	margin-top: 80px;
+	font-family: Lato;
+	font-size: 25px;    
+	background-color: transparent;
+	border: none;
+	border-top: 3px solid rgb(106,121,137);    
+	border-bottom: 3px solid rgb(106,121,137);
+	outline: none;
+	color: rgb(106,121,137); 
+	margin-right: 50px;
+}
+
+
+.label-hakuri{
+	display: block;
+	position: relative;	
+	left: 10px;
+	top: -60px;
+	font-size: 30px;
+	cursor: text;
+	color: rgb(106,121,137);    
+	transition: all .3s;    
+}
+
+.hakuri #input-hakuri:focus + .label-hakuri {
+	top: -130px;
+	font-size: 25px;
+	transition: all 0.3s ease;
+	text-align: left;
+}
+
+
+
+
+
+
+
